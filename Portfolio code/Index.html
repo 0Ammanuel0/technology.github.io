@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/792fb2b283.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+   <div id="header">
+    <div class="container"></div>
+    <nav>
+        <img src="Images/Logo.png" class="logo">
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-text">
+        <p>UI/Ux Designer</p>
+        <h1>Hi, I'm <span> Ammanuel </span> <br> From tech class</h1>
+    </div>
+</div> 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/About me.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="sub-to-title">I am Ammanuel, I have recently got in to into the languages of Python,
+                    Lua, C++, and HTML, I am thrilled to contribute and learn in this dynamic world of code. I also started digital art.</p>
+
+                    <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            
+                            <li><span>UI/UX</span><br>Designer web interface</li>
+                            <li><span>Web Development</span><br>Disigning Website</li>
+                            <li><span>Web Disigning</span><br>Disigning Adds</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+
+                            <li><span>Advertisment</span><br>Abb Wear</li>
+                            <li><span>Website</span><br>Portfolio</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Class</span><br>Tech 1 and Tech 3</li>
+                            <li><span>Grade</span><br>9th</li>
+                            <li><span>School</span><br>Vanguard Classical School</li>
+
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------services-------- -->
+<div id="Services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="Services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+             <h2>Website</h2>
+             <p>I am skilled in web development and design, and I will build a 
+                responsive and user-friendly website that aligns with your goals
+                 and showcases your unique identity effectively..</p>
+             <a href="#">Learn more</a>
+        </div>
+        <div>
+            <i class="fa-brands fa-codepen"></i>
+             <h2>Advertisment</h2>
+             <p>I'll craft a compelling and visually captivating advertisement that effectively
+                 communicates your message, engages your target audience, and drives desired actions.</p>
+             <a href="#">Learn more</a>
+        </div>
+    </div>
+</div>
+<!-- -------------------- portfolio--------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/Website.jpg">
+                <div class="layer">
+
+                    <h3>Website</h3>
+                    <p>Ill make future websites.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/advertisment.png">
+                <h3>Advertisment</h3>
+                    <p>I made a advertisement</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------- Contact--------- -->
+    <div id="Contact">
+            <div class="contact-section">
+                <h2>Contact Me</h2>
+                <p>If you have any inquiries, feel free to contact me via email:</p>
+                <a href="mailto:atefera@vanguardclassical.org">atefera@vanguardclassical.org</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    function opentab(tabName) {
+        // Get all elements with class "tab-contents" and hide them
+        var tabContents = document.querySelectorAll('.tab-contents');
+        tabContents.forEach(function (tabContent) {
+            tabContent.classList.remove('active-tab');
+        });
+
+        // Get all elements with class "tab-links" and remove the "active-link" class
+        var tabLinks = document.querySelectorAll('.tab-links');
+        tabLinks.forEach(function (tabLink) {
+            tabLink.classList.remove('active-link');
+        });
+
+        // Show the current tab and add the "active-link" class to the clicked tab button
+        document.getElementById(tabName).classList.add('active-tab');
+        event.currentTarget.classList.add('active-link');
+    }
+</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add an event listener to each navigation link
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Get the target section's ID from the href attribute
+                    const targetId = this.getAttribute('href').substring(1);
+
+                    // Use the scrollIntoView method to smoothly scroll to the target section
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+  
+</html>

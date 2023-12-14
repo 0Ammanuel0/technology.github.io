@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Popping', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("Images/Background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 35px; /* Moved to the right by 10 pixels */
+}
+
+.logo {
+    width: 130px; /* Adjusted width by 10 pixels */
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    margin-left: 35px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+/*------------About--------*/
+#about{
+    padding: 80px 0;
+    color: #ababab
+}
+.row{ 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.sub-to-title{
+    font-size: 30px;
+    font-weight: 300;
+    color: #ababab;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px; /* Added 'px' unit */
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%; /* Added 'px' unit */
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+
+}
+/* --------------------------- services-------- */
+#Services {
+    padding: 30px 0;
+}
+
+.Services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Corrected typo: "manmax" to "minmax" */
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.Services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px; /* Corrected border-radius property */
+    transition: background 0.5s, transform 0.5s; /* Corrected 'transorm' to 'transform' */
+}
+
+.Services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.Services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.Services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.Services-list div:hover{
+    background: #ff004f;
+    transform: translate(-10px);
+}
+/* ---------- portfolio --------------*/
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 4vw;
+    margin-top: 5vw;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    text-align: center; /* Center-align text */
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.work p {
+    color: #888; /* Gray text color */
+    padding: 15px; /* Adjust as needed */
+    margin: 0; /* Remove default margins */
+}
+.work h3 {
+    color: black;
+}
+.work h3 p {
+    color: darkgray;
+}
+/* Contact Section Styles */
+.contact-section {
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #2d2f30; /* Light gray background */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #ff004f; /* Dark gray heading color */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    color: #e0e0e0;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.contact-section a {
+    color: #080808; /* Blue link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+/* style.css */
+
+#header {
+    font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with the font you want to use */
+    font-weight: bold;
+}
+
+#header nav a {
+    font-family: 'Your Desired Font', sans-serif; /* Apply the same font to the navigation links if needed */
+    /* Add any additional styles for the navigation links here */
+}
